@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Title from './Title';
 
-class Missions extends Component {
+class MissionsCard extends Component {
   render() {
     // const { headline } = this.props;
 
@@ -12,5 +12,9 @@ class Missions extends Component {
     );
   }
 }
+
+// Missions.propTypes = {
+//   headline: PropTypes.string.isRequired,
+// };
 
 export default Missions;
