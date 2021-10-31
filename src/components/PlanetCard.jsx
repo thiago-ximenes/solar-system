@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Card } from 'react-bootstrap';
 
 class PlanetCard extends Component {
   render() {
     const { planetName, planetImage } = this.props;
 
     return (
-      <div data-testid="planet-card">
-        <h3 data-testid="planet-name">{planetName}</h3>
-        <img src={ planetImage } alt={ `Planeta ${planetName}` } />
-      </div>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={ planetImage } />
+        <Card.Title>{planetName}</Card.Title>
+      </Card>
     );
   }
 }
