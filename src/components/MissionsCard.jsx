@@ -17,4 +17,4 @@ class MissionsCard extends Component {
 //   headline: PropTypes.string.isRequired,
 // };
 
-export default Missions;
+export default MissionsCard;
