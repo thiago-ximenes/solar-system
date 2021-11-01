@@ -10,7 +10,10 @@ html {
 }
 
 header {
+  background-color: #4780fe;
+  color: white;
   font-size: 45px;
+  padding: 25px;
 }
 
 .App {

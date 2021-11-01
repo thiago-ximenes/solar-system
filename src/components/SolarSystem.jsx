@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Row, Container } from 'react-bootstrap';
+import { Row, Container, Col, Card } from 'react-bootstrap';
 import Title from './Title';
-import PlanetCard from './PlanetCard';
 import Planets from '../data/planets';
+import './Planet-cards.css';
 
 class SolarSystem extends Component {
   render() {
@@ -10,17 +10,25 @@ class SolarSystem extends Component {
       <div data-testid="solar-system">
         <Title headline="Planetas" />
         <Container>
-          <Row className="container justify-content-md-center">
+          <Row className="justify-content-center">
             {
               Planets
                 .map(
                   (
                     { name, image },
-                  ) => (<PlanetCard
-                    key={ name }
-                    planetImage={ image }
-                    planetName={ name }
-                  />),
+                  ) => (
+                    <Col key={ name } md="auto">
+                      <Card
+                        className="bg-light text-dark mb-3 planet-cards"
+                        style={ { width: '18rem' } }
+                      >
+                        <Card.Img variant="top" src={ image } />
+                        <Card.Body>
+                          <Card.Title>{ name }</Card.Title>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ),
                 )
             }
           </Row>

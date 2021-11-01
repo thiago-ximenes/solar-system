@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 class Header extends Component {
   render() {
-    const header = <h1 className="header">Sistema Solar</h1>;
+    const header = <h1>Sistema Solar</h1>;
 
     return (
-      <header>
+      <header className="bg-primary text-light">
         {header}
       </header>
     );
